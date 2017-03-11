@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pgc>
+  <grupo num="1">
+    <nombre>Financiación Básica</nombre>
+    <descripcion></descripcion>
+    <subgrupo2 num="10">
+      <nombre>Capital</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="100">
+        <nombre>Capital Social</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="101">
+        <nombre>Fondo Social</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="102">
+        <nombre>Capital</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="103">
+        <nombre>Socios por desembolsos no exigidos</nombre>
+        <descripcion></descripcion>
+        <cuenta codigo="1030">
+          <nombre>Socios por desembolsos no exigidos, capital social</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1034">
+          <nombre>Socios por desembolsos no exigidos, capital pendiente de incripción</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+      </subgrupo3>
+      <subgrupo3 num="104">
+        <nombre>Socios por aportaciones no dinerarias pendientes</nombre>
+        <descripcion></descripcion>
+        <cuenta codigo="1040">
+          <nombre>Socios por aportaciones no dinerarias pendientes, capital social</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1044">
+          <nombre>Socios por aportaciones no dinerarias pendientes, capital pendiente de inscripción</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+      </subgrupo3>
+      <subgrupo3 num="108">
+        <nombre>Acciones o participaciones propias en situaciones especiales</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="109">
+        <nombre>Acciones o participaciones propias para reducción de capital</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="11">
+      <nombre>Reservas</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="110">
+        <nombre>Prima de emisión o asunción</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="111">
+        <nombre>Patrimonio neto por emisión de instrumentos financieros compuestos</nombre>
+        <descripcion></descripcion>
+        <cuenta codigo="1110">
+          <nombre>Patrimonio neto por emisión de instrumentos finanieros compuestos</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1111">
+          <nombre>Resto de instrumentos de patrimonio neto</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+      </subgrupo3>
+      <subgrupo3 num="112">
+        <nombre>Reserva legal</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="113">
+        <nombre>Reservas voluntarias</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="114">
+        <nombre>Reservas especiales</nombre>
+        <descripcion></descripcion>
+        <cuenta codigo="1140">
+          <nombre>Reservas para acciones o participaciones de la sociedad dominante</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1141">
+          <nombre>Reservas estatutarias</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1142">
+          <nombre>Reserva por capital amortizado</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1143">
+          <nombre>Reserva por fondo de comercio</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1144">
+          <nombre>Reservas por acciones propias aceptadas en garantía</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+      </subgrupo3>
+      <subgrupo3 num="115">
+        <nombre>Reservas por pérdidas y ganancias actuariales y otros ajustes</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="118">
+        <nombre>Aportaciones de socios o propietarios</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="119">
+        <nombre>Diferencias por ajuste del capital a euros</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+  </grupo>
+</pgc>

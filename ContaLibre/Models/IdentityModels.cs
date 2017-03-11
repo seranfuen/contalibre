@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ContaLibre.Models
 {
@@ -25,7 +26,22 @@ namespace ContaLibre.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.SetInitializer<ApplicationDbContext>(new DropCreateDatabaseIfModelChanges<ApplicationDbContext>());
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Entity<Grupo>().Property(c => c.NumGrupo).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
+            modelBuilder.Entity<SubgrupoN2>().Property(c => c.NumSubgrupo).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
+            modelBuilder.Entity<SubgrupoN3>().Property(c => c.NumSubgrupo).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
+        }
+
+        public DbSet<Grupo> Grupos { get; set; }
+        public DbSet<SubgrupoN2> SubgruposN2 { get; set; }
+        public DbSet<SubgrupoN3> SubgruposN3 { get; set; }
+        public DbSet<Cuenta> Cuentas { get; set; }
 
         public static ApplicationDbContext Create()
         {

@@ -115,5 +115,409 @@
         <descripcion></descripcion>
       </subgrupo3>
     </subgrupo2>
+    <subgrupo2 num="12">
+      <nombre>Resultados pendientes de aplicación</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="120">
+        <nombre>Remanente</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="121">
+        <nombre>Resultados negativos de ejercicios anteriores</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="129">
+        <nombre>Resultados del ejercicio</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="13">
+      <nombre>Subvenciones, donaciones y ajustes por cambios de valor</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="130">
+        <nombre>Subvenciones oficiales de capital</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="131">
+        <nombre>Donaciones y legados de capital</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="132">
+        <nombre>Otras subvenciones, donaciones y legados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="133">
+        <nombre>Ajustes por valoración en instrumentos financieros</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="134">
+        <nombre>Operaciones de cobertura</nombre>
+        <descripcion></descripcion>
+        <cuenta codigo="1340">
+          <nombre>Cobertura de flujos de efectivo</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1341">
+          <nombre>Cobertura de una inversión neta en un negocio en el extranjero</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+      </subgrupo3>
+      <subgrupo3 num="135">
+        <nombre>Diferencias de conversión</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="136">
+        <nombre>Ajustes por valoración en activos no corrientes y grupos enajenables de elementos mantenidos para la venta</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="137">
+        <nombre>Ingresos fiscales a distribuir en varios ejercicios</nombre>
+        <descripcion></descripcion>
+        <cuenta codigo="1370">
+          <nombre>Ingresos fiscales por diferencias permanentes a distribuir en varios ejercicios</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1371">
+          <nombre>Ingresos fiscales por deducciones y bonificaciones a distribuir en varios ejercicios</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="14">
+      <nombre>Provisiones</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="140">
+        <nombre>Provisión para retribuciones y otras prestaciones al personal.</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="141">
+        <nombre>Provisión para impuestos</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="142">
+        <nombre>Provisión para otras responsabilidades</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="143">
+        <nombre>Provisión por desmantelamiento, retiro o rehabilitación del inmovilizado.</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="145">
+        <nombre>Provisión para actuaciones medioambientales</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="146">
+        <nombre>Provisión para reestructuraciones</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="147">
+        <nombre>Provisiones por transacciones con pagos basados en instrumentos de patrimonio</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="15">
+      <nombre>Deudas a largo plazo con características especiales</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="150">
+        <nombre>Acciones o participaciones a largo plazo contabilizadas como pasivo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="153">
+        <nombre>Desembolsos no exigidos por acciones o participaciones contabilizadas como pasivo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="154">
+        <nombre>Aportaciones no dinerarias pendientes por acciones o participaciones contabilizadas como pasivo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="16">
+      <nombre>Deudas a largo plazo con partes vinculadas</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="160">
+        <nombre>Deudas a largo plazo con entidades de crédito vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="161">
+        <nombre>Proveedores de inmovilizado a largo plazo, partes vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="162">
+        <nombre>Acreedores por arrendamiento financiero a largo plazo, partes vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="163">
+        <nombre>Otras deudas a largo plazo con partes vinculadas</nombre>
+        <descripcion></descripcion>
+        <cuenta codigo="1633">
+          <nombre>Otras deudas a largo plazo empresas del grupo</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1634">
+          <nombre>Otras deudas a largo plazo empresas asociadas</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1635">
+          <nombre>Otras deudas a largo plazo con otras partes vinculadas</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="17">
+      <nombre>Deudas a largo plazo por préstamos recibidos y otros conceptos</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="170">
+        <nombre>Deudas a largo plazo con entidades de crédito</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="171">
+        <nombre>Deudas a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="172">
+        <nombre>Deudas a largo plazo transformables en subvenciones, donaciones y legados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="173">
+        <nombre>Proveedores de inmovilizado a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="174">
+        <nombre>Acreedores de arrendamiento financiero a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="175">
+        <nombre>Efectos a pagar a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="176">
+        <nombre>Pasivos por derivados financieros a largo plazo</nombre>
+        <descripcion></descripcion>
+        <cuenta codigo="1765">
+          <nombre>Pasivos por derivados financieros a largo plazo, cartera de negociación</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="1768">
+          <nombre>Pasivos por derivados financieros a largo plazo, instrumentos de cobertura</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+      </subgrupo3>
+      <subgrupo3 num="177">
+        <nombre>Obligaciones y bonos</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="178">
+        <nombre>Obligaciones y bonos convertibles</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="179">
+        <nombre>Deudas representadas en otros valores negociablesl</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="18">
+      <nombre>Pasivos por fianzas y garantías y otros conceptos a largo plazo</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="180">
+        <nombre>Fianzas recibidas a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="181">
+        <nombre>Anticipos recibidos por ventas o prestaciones de servicios a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="185">
+        <nombre>Depósitos recibidos a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="189">
+        <nombre>Garantías financieras a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="19">
+      <nombre>Situaciones transitorias de financiación</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="190">
+        <nombre>Acciones o participaciones emitidas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="192">
+        <nombre>Acciones o participaciones emitidas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="194">
+        <nombre>Capital emitido pendiente de inscripción</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="195">
+        <nombre>Acciones o participaciones emitidas consideradas como pasivos financieros</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="197">
+        <nombre>Suscriptores de acciones consideradas como pasivos financieros</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="199">
+        <nombre>Acciones o participaciones emitidas consideradas como pasivos financieros pendientes de inscripción</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+  </grupo>
+  <grupo num="2">
+    <nombre>Inmovilizado</nombre>
+    <descripcion>Activo no Corriente</descripcion>
+    <subgrupo2 num="20">
+      <nombre>Inmovilizaciones intangibles</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="200">
+        <nombre>Gastos de investigación</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="201">
+        <nombre>Desarrollo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="202">
+        <nombre>Concesiones administrativas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="203">
+        <nombre>Propiedad industrial</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="204">
+        <nombre>Fondo de comercio</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="205">
+        <nombre>Derechos de traspaso</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="206">
+        <nombre>Aplicaciones informáticas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="209">
+        <nombre>Anticipos para inmovilizaciones intangibles</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="21">
+      <nombre>Inmovilizaciones materiales</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="210">
+        <nombre>Terrenos y bienes naturales</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="211">
+        <nombre>Construcciones</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="212">
+        <nombre>Instalaciones técnicas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="213">
+        <nombre>Maquinaria</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="214">
+        <nombre>Utillaje</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="215">
+        <nombre>Otras instalaciones</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="216">
+        <nombre>Mobiliario</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="217">
+        <nombre>Equipos para procesos de información</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="218">
+        <nombre>Elementos de transporte</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="219">
+        <nombre>Otro inmovilizado material</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="22">
+      <nombre>Inversiones Inmobiliarias</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="220">
+        <nombre>Inversiones en terrenos y bienes naturales</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="221">
+        <nombre>Inversiones en construcciones</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="23">
+      <nombre>Inmovilzaciones materiales en curso</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="230">
+        <nombre>Adaptación de terrenos y bienes naturales</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="231">
+        <nombre>Construcciones en curso</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="232">
+        <nombre>Instalaciones técnicas en montaje</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="233">
+        <nombre>Maquinaria en montaje</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="237">
+        <nombre>Equipos para procesos de información en montaje</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="239">
+        <nombre>Anticipos para inmovilizaciones materiales</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="24">
+      <nombre>Inversiones financieras a largo plazo en partes vinculadas</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="240">
+        <nombre>Participaciones a largo plazo en partes vinculadas</nombre>
+        <descripcion></descripcion>
+        <cuenta codigo="2403">
+          <nombre>Participación a largo plazo en empresas del grupo</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="2404">
+          <nombre>Participación a largo plazo en empresas asociadas</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="2405">
+          <nombre>Participaciones a largo plazo en otras partes vinculadas</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+      </subgrupo3>
+      <subgrupo3 num="241">
+        <nombre>Valores representativos de deuda a largo plazo de partes vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="242">
+        <nombre>Créditos a largo plazo a partes vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="249">
+        <nombre>Desembolsos pendientes sobre participaciones a largo plazo en partes vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
   </grupo>
 </pgc>

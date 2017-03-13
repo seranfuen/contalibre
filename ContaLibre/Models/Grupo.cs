@@ -9,7 +9,7 @@ namespace ContaLibre.Models
     /// <summary>
     /// Representa uno de los 9 grupos del PGC
     /// </summary>
-    public class Grupo
+    public class Grupo : IGrupoPgc
     {
         [Required]
         [Key]
@@ -23,5 +23,10 @@ namespace ContaLibre.Models
         public string Descripcion { get; set; }
 
         public virtual ICollection<SubgrupoN2> SubgruposN2 { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("Grupo {0}: {1}", NumGrupo, Nombre);
+        }
     }
 }

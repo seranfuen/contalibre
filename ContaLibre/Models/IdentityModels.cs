@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using ContaLibre.InitialData;
 
 namespace ContaLibre.Models
 {
@@ -21,12 +22,22 @@ namespace ContaLibre.Models
         }
     }
 
+    public class DropCreateDbAlwaysTest : DropCreateDatabaseAlways<ApplicationDbContext>
+    {
+        protected override void Seed(ApplicationDbContext context)
+        {
+            var o = new CuadroCuentasPgcXmlParser();
+            o.GetCuadroCuentasPgc();
+            base.Seed(context);
+        }
+    }
+
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
-            Database.SetInitializer<ApplicationDbContext>(new DropCreateDatabaseIfModelChanges<ApplicationDbContext>());
+            Database.SetInitializer<ApplicationDbContext>(new DropCreateDbAlwaysTest());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -34,8 +45,8 @@ namespace ContaLibre.Models
             base.OnModelCreating(modelBuilder);
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Grupo>().Property(c => c.NumGrupo).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
-            modelBuilder.Entity<SubgrupoN2>().Property(c => c.NumSubgrupo).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
-            modelBuilder.Entity<SubgrupoN3>().Property(c => c.NumSubgrupo).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
+            modelBuilder.Entity<SubgrupoN2>().Property(c => c.NumGrupo).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
+            modelBuilder.Entity<SubgrupoN3>().Property(c => c.NumGrupo).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
         }
 
         public DbSet<Grupo> Grupos { get; set; }

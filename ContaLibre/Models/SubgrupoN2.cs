@@ -9,14 +9,14 @@ namespace ContaLibre.Models
     /// <summary>
     /// Subgrupo de nivel 2 en el PGC (2 dígitos)
     /// </summary>
-    public class SubgrupoN2
+    public class SubgrupoN2 : IGrupoPgc
     {
         /// <summary>
         /// Clave del subgrupo de nivel 2 (debe tener 2 dígitos)
         /// </summary>
         [Required]
         [Key]
-        public short NumSubgrupo { get; set; }
+        public short NumGrupo { get; set; }
 
         [Required]
         [MaxLength(255)]
@@ -37,5 +37,10 @@ namespace ContaLibre.Models
         public virtual Grupo Grupo { get; set; }
 
         public virtual ICollection<SubgrupoN3> SubgruposN3 { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("Subgrupo de Nivel 2 {0}: {1}", NumGrupo, Nombre);
+        }
     }
 }

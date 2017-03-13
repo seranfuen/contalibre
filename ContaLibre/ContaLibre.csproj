@@ -220,10 +220,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="InitialData\CuadroCuentasPgcXmlParser.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cuenta.cs" />
     <Compile Include="Models\Grupo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IGrupoPgc.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MeViewModels.cs" />
     <Compile Include="Models\SubgrupoN2.cs" />
@@ -242,7 +244,9 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="InitialData\PlanGeneralContableCuentas.xml" />
+    <EmbeddedResource Include="InitialData\PlanGeneralContableCuentas.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />

@@ -49,5 +49,10 @@ namespace ContaLibre.Models
             get;
             set;
         }
+
+        public bool IsUserAccount
+        {
+            get { return User != null; }
+        }
     }
 }

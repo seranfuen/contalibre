@@ -519,5 +519,381 @@
         <descripcion></descripcion>
       </subgrupo3>
     </subgrupo2>
+    <subgrupo2 num="25">
+      <nombre>Otras inversiones financieras a largo plazo</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="250">
+        <nombre>Inversiones financieras a largo plazo en instrumentos de patrimonio</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="252">
+        <nombre>Créditos a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="253">
+        <nombre>Créditos a largo plazo por enajenación de inmovilizado</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="254">
+        <nombre>Créditos a largo plazo al personal</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="255">
+        <nombre>Activos por derivados financieros a largo plazo</nombre>
+        <descripcion></descripcion>
+        <cuenta codigo="2550">
+          <nombre>Activos por derivados financieros a largo plazo, cartera de negociación</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+        <cuenta codigo="2553">
+          <nombre>Activos por derivados financieros a largo plazo, instrumentos de cobertura</nombre>
+          <descripcion></descripcion>
+        </cuenta>
+      </subgrupo3>
+      <subgrupo3 num="257">
+        <nombre>Activos por retribuciones a largo plazo de prestación definida</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="258">
+        <nombre>Imposiciones a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="259">
+        <nombre>Desembolsos pendientes sobre participaciones en el patrimonio neto a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="26">
+      <nombre>Fianzas y depósitos constituidos a largo plazo</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="260">
+        <nombre>Fianzas constituidas a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="265">
+        <nombre>Depósitos constituidos a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="28">
+      <nombre>Amortización acumulada del inmovilizado</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="280">
+        <nombre>Amortización acumulada del inmovilizado intangible</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="281">
+        <nombre>Amortización acumulada del inmovilizado material</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="282">
+        <nombre>Amortización acumulada de las inversiones inmobiliarias</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="29">
+      <nombre>Deterioro de valor de activos no corrientes</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="290">
+        <nombre>Deterioro de valor del inmovilizado intangible</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="291">
+        <nombre>Deterioro de valor del inmovilizado material</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="292">
+        <nombre>Deterioro de valor de las inversiones inmobiliarias</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="293">
+        <nombre>Deterioro de valor de participaciones a largo plazo en partes vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="294">
+        <nombre>Deterioro de valor de valores representativos de deuda a largo plazo de partes vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="295">
+        <nombre>Deterioro de valor de créditos a largo plazo a partes vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="296">
+        <nombre>Deterioro de valor de participaciones en el patrimonio neto a largo plazo.</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="297">
+        <nombre>Deterioro de valor de valores representativos de deuda a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="298">
+        <nombre>Deterioro de valor de créditos a largo plazo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+  </grupo>
+  <grupo num="3">
+    <nombre>Existencias</nombre>
+    <descripcion></descripcion>
+    <subgrupo2 num="30">
+      <nombre>Comerciales</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="300">
+        <nombre>Comerciales</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="301">
+        <nombre>Comerciales</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="31">
+      <nombre>Materias primas</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="310">
+        <nombre>Materias primas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="311">
+        <nombre>Materias primas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="32">
+      <nombre>Otros aprovisionamientos</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="320">
+        <nombre>Elementos y conjuntos incorporables</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="321">
+        <nombre>Combustibles</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="322">
+        <nombre>Repuestos</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="325">
+        <nombre>Materiales diversos</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="326">
+        <nombre>Embalajes</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="327">
+        <nombre>Envases</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="328">
+        <nombre>Material de oficina</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="33">
+      <nombre>Productos en curso</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="330">
+        <nombre>Productos en curso</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="331">
+        <nombre>Productos en curso</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="34">
+      <nombre>Productos semiterminados</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="340">
+        <nombre>Productos semiterminados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="341">
+        <nombre>Productos semiterminados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="35">
+      <nombre>Productos terminados</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="350">
+        <nombre>Productos terminados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="351">
+        <nombre>Productos terminados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="36">
+      <nombre>Subproductos, residuos y materiales recuperados</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="360">
+        <nombre>Subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="361">
+        <nombre>Subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="362">
+        <nombre>Subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="363">
+        <nombre>Subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="364">
+        <nombre>Subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="365">
+        <nombre>Subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="366">
+        <nombre>Subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="367">
+        <nombre>Subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="368">
+        <nombre>Subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="369">
+        <nombre>Subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="39">
+      <nombre>Deterioro de valor de las existencias</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="390">
+        <nombre>Deterioro de valor de las mercaderías</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="391">
+        <nombre>Productos terminados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="392">
+        <nombre>Deterioro de valor de otros aprovisionamientos</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="393">
+        <nombre>Deterioro de valor de los productos en curso</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="394">
+        <nombre>Deterioro de valor de los productos semiterminados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="395">
+        <nombre>Deterioro de valor de los productos terminados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="396">
+        <nombre>Deterioro de valor de los subproductos, residuos y materiales recuperados</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+  </grupo>
+  <grupo num="4">
+    <nombre>Acreedores y deudores por operaciones de tráfico</nombre>
+    <descripcion></descripcion>
+    <subgrupo2 num="40">
+      <nombre>Proveedores</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="400">
+        <nombre>Proveedores</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="401">
+        <nombre>Proveedores, efectos comerciales a pagar</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="403">
+        <nombre>Proveedores, empresas del grupo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="404">
+        <nombre>Proveedores, empresas asociadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="405">
+        <nombre>Proveedores, otras partes vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="406">
+        <nombre>Envases y embalajes a devolver a proveedores</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="407">
+        <nombre>Anticipos a proveedores</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="41">
+      <nombre>Acreedores varios</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="410">
+        <nombre>Acreedores por prestaciones de servicios</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="411">
+        <nombre>Acreedores, efectos comerciales a pagar</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="419">
+        <nombre>Acreedores por operaciones en común</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
+    <subgrupo2 num="43">
+      <nombre>Clientes</nombre>
+      <descripcion></descripcion>
+      <subgrupo3 num="430">
+        <nombre>Clientes</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="431">
+        <nombre>Clientes, efectos comerciales a cobrar</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="432">
+        <nombre>Clientes operaciones de factoring</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="433">
+        <nombre>Clientes, empresas del grupo</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="434">
+        <nombre>Clientes, empresas asociadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="435">
+        <nombre>Clientes, otras partes vinculadas</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="436">
+        <nombre>Clientes de dudoso cobro</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="437">
+        <nombre>Envases y embalajes a devolver por clientes</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+      <subgrupo3 num="438">
+        <nombre>Anticipos de clientes</nombre>
+        <descripcion></descripcion>
+      </subgrupo3>
+    </subgrupo2>
   </grupo>
 </pgc>

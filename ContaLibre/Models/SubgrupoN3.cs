@@ -9,14 +9,14 @@ namespace ContaLibre.Models
     /// <summary>
     /// Subgrupo de nivel 3 de cuentas (3 dígitos)
     /// </summary>
-    public class SubgrupoN3
+    public class SubgrupoN3 : IGrupoPgc
     {
         /// <summary>
         /// Clave del subgrupo de nivel 3. Debe tener tres dígitos
         /// </summary>
         [Required]
         [Key]
-        public short NumSubgrupo { get; set; }
+        public short NumGrupo { get; set; }
 
         [Required]
         [MaxLength(255)]
@@ -30,5 +30,10 @@ namespace ContaLibre.Models
 
         [Required]
         public virtual SubgrupoN2 SubgrupoN2 { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("Subgrupo de Nivel 3 {0}: {1}", NumGrupo, Nombre);
+        }
     }
 }

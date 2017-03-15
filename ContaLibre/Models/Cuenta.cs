@@ -24,8 +24,7 @@ namespace ContaLibre.Models
         /// Código de la cuenta
         /// </summary>
         [Required]
-        [MaxLength(16)]
-        public string Codigo { get; set; }
+        public short Codigo { get; set; }
 
         [MaxLength(2000)]
         public string Descripcion

@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using ContaLibre.InitialData;
+using System;
 
 namespace ContaLibre.Models
 {
@@ -26,9 +27,17 @@ namespace ContaLibre.Models
     {
         protected override void Seed(ApplicationDbContext context)
         {
-            var o = new CuadroCuentasPgcXmlParser();
-            o.GetCuadroCuentasPgc();
-            base.Seed(context);
+            try
+            {
+                var pgcParser = new CuadroCuentasPgcXmlParser();
+                pgcParser.ParseCuadroCuentasPgc();
+                context.Grupos.AddRange(pgcParser.CuadroPgc);
+                context.Cuentas.AddRange(pgcParser.Cuentas);
+                context.SaveChanges();
+            } catch (Exception e)
+            {
+                throw e;
+            }
         }
     }
 

@@ -22,11 +22,6 @@ namespace ContaLibre.Models
         [MaxLength(255)]
         public string Nombre { get; set; }
 
-        [Required]
-        [MaxLength(2)]
-        // Código de 2 dígitos (grupo y subgrupo)
-        public string Codigo { get; set; }
-
         [MaxLength(2000)]
         public string Descripcion
         {

@@ -26,12 +26,32 @@ namespace ContaLibre.InitialData
 
         #endregion
 
-        public void GetCuadroCuentasPgc()
+        private List<Cuenta> _listaCuentas;
+        private List<Grupo> _cuadroPgc;
+
+        public void ParseCuadroCuentasPgc()
         {
             var stream = GetCuadroCuentasXmlStream();
             var document = new XmlDocument();
             document.Load(stream);
-            var colecionGrupos = GetListaGruposPgc(document.GetElementsByTagName(GRUPO_TAG));
+            _listaCuentas = new List<Cuenta>();
+            _cuadroPgc = GetListaGruposPgc(document.GetElementsByTagName(GRUPO_TAG));
+        }
+
+        public List<Grupo> CuadroPgc
+        {
+            get
+            {
+                return _cuadroPgc;
+            }
+        }
+
+        public List<Cuenta> Cuentas
+        {
+            get
+            {
+                return _listaCuentas;
+            }
         }
 
         #region 'Funciones Privadas'
@@ -78,6 +98,18 @@ namespace ContaLibre.InitialData
             var grupoN3 = CrearNodo<SubgrupoN3>(nodo);
             grupo.SubgruposN3.Add(grupoN3);
             // No podemos añadir desde aqui las cuentas al subgrupo 3 porque ya pueden estar definidas por cada usuario, o ser cuentas por defecto
+            foreach (XmlNode child in nodo.SelectNodes(CUENTA_TAG))
+            {
+                var cuenta = new Cuenta()
+                {
+                    Codigo = short.Parse(child.Attributes[CUENTA_ID_ATTR].Value),
+                    Descripcion = child.SelectSingleNode(DESCRIPCION_TAG).InnerText,
+                    Nombre = child.SelectSingleNode(NOMBRE_TAG).InnerText,
+                    User = null,
+                    SubgrupoN3 = grupoN3
+                };
+                _listaCuentas.Add(cuenta);
+            }
         }
 
         private Stream GetCuadroCuentasXmlStream()

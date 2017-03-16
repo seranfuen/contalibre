@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -29,6 +30,7 @@ namespace ContaLibre.Models
         }
 
         [Required]
+        [JsonIgnore]
         public virtual Grupo Grupo { get; set; }
 
         public virtual ICollection<SubgrupoN3> SubgruposN3 { get; set; }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -29,6 +30,7 @@ namespace ContaLibre.Models
         }
 
         [Required]
+        [JsonIgnore]
         public virtual SubgrupoN2 SubgrupoN2 { get; set; }
 
         public override string ToString()

@@ -41,6 +41,8 @@ namespace ContaLibre
             bundles.Add(new StyleBundle("~/Content/css").Include(
                  "~/Content/bootstrap.css",
                  "~/Content/Site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angularjs").Include("~/Scripts/angular.js"));
         }
     }
 }

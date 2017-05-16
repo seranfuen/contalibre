@@ -44,7 +44,7 @@
                             angular.forEach(subgrupoN2.subgruposN3, function (subgrupoN3, index) {
                                 tbodyHtml += getFilaSubgrupoN3(subgrupoN3);
                                 angular.forEach(subgrupoN3.cuentas, function (cuenta, index) {
-                                    tbodyHtml += getFilaCUenta(cuenta);
+                                    tbodyHtml += getFilaCuenta(cuenta);
                                 });
                             });
                         });

@@ -19,7 +19,18 @@ namespace ContaLibre.Controllers
         // GET: api/GruposPgc
         public IEnumerable<Grupo> GetGrupos()
         {
-            return db.Grupos.ToList();
+            var grupos = db.Grupos.ToList();
+            foreach (var grupo in grupos)
+            {
+                foreach (var subgrupo2 in grupo.SubgruposN2)
+                {
+                    foreach (var subgrupo3 in subgrupo2.SubgruposN3)
+                    {
+                        subgrupo3.Cuentas = db.Cuentas.Where(cuenta => cuenta.SubgrupoN3.NumGrupo == subgrupo3.NumGrupo).ToList();
+                    }
+                }
+            }
+            return grupos;
         }
     }
 }

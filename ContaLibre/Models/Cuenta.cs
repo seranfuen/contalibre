@@ -34,6 +34,7 @@ namespace ContaLibre.Models
         }
 
         [Required]
+        [JsonIgnore]
         public virtual SubgrupoN3 SubgrupoN3
         {
             get;

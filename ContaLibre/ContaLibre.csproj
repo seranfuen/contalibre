@@ -215,8 +215,10 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CuentasController.cs" />
+    <Compile Include="Controllers\GruposController.cs" />
     <Compile Include="Controllers\GruposPgcController.cs" />
     <Compile Include="Controllers\GruposPgcViewController.cs" />
+    <Compile Include="Controllers\CuentasViewController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeController.cs" />
@@ -227,6 +229,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cuenta.cs" />
     <Compile Include="Models\Grupo.cs" />
+    <Compile Include="Models\GrupoViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IGrupoPgc.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -1098,11 +1101,12 @@
     </Content>
     <Content Include="Scripts\version.json" />
     <Content Include="Views\GruposPgcView\Index.cshtml" />
+    <Content Include="Views\CuentasView\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Scripts\angularjs\" />
-    <Folder Include="Views\Cuentas\" />
+    <Folder Include="Views\GruposView\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

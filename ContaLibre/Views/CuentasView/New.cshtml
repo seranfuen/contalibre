@@ -1,0 +1,6 @@
+﻿
+@Scripts.Render("~/Scripts/app/contalibre-ng-app.js")
+
+<div ng-app="contalibreApp" ng-controller="CuentaNuevaController">
+    <select ng-model="grupoSeleccionado" ng-options="grupo.numGrupo + ' ' + grupo.nombre  for grupo in grupos" ng-change="actualizarGruposN2()"></select>
+</div>

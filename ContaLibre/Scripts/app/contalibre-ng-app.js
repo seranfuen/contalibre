@@ -11,6 +11,10 @@
         servicio.getCuentas = function () {
             return $http.get("/api/GruposPgc");
         };
+        servicio.getGrupos = function () {
+            return $http.get("/api/Grupos");
+        };
+        // TODO: subgruposN2 por numgrupo
         return servicio;
     });
 })();
@@ -23,6 +27,27 @@
         $crudGruposPgc.getCuentas().then(function (response) {
             $scope.Cuentas = response.data;
         });
+    });
+
+    app.controller("CuentaNuevaController", function ($scope, $crudGruposPgc) {
+        $crudGruposPgc.getGrupos().then(function (response) {
+            $scope.grupos = response.data;
+            $scope.grupoSeleccionado = $scope.grupos[0];
+        });
+
+        $scope.gruposN2 = [];
+        $scope.actualizarGruposN2 = function () {
+            if ($scope.grupoSeleccionado !== null) {
+                if ($scope.gruposN2[$scope.grupoSeleccionado.numGrupo] !== undefined) {
+                    $scope.gruposN2Seleccionados = $scope.gruposN2[$scope.grupoSeleccionado.numGrupo];
+                } else {
+                    $crudGruposPgc.getGruposN2($scope.grupoSeleccionado.numGrupo).then(function (response) {
+                        $scope.gruposN2[$scope.grupoSeleccionado.numGrupo] = response.data;
+                        $scope.gruposN2Seleccionados = $scope.gruposN2[$scope.grupoSeleccionado.numGrupo];
+                    });
+                }
+            }
+        };
     });
 })();
 

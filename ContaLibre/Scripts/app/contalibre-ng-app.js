@@ -14,7 +14,12 @@
         servicio.getGrupos = function () {
             return $http.get("/api/Grupos");
         };
-        // TODO: subgruposN2 por numgrupo
+        servicio.getSubgruposN2 = function (numGrupo) {
+            return $http.get("/api/Grupos/getSubgrupo2/" + numGrupo);
+        }
+        servicio.getSubgruposN3 = function (numGrupo) {
+            return $http.get("/api/Grupos/getSubgrupo3/" + numGrupo);
+        }
         return servicio;
     });
 })();
@@ -32,7 +37,6 @@
     app.controller("CuentaNuevaController", function ($scope, $crudGruposPgc) {
         $crudGruposPgc.getGrupos().then(function (response) {
             $scope.grupos = response.data;
-            $scope.grupoSeleccionado = $scope.grupos[0];
         });
 
         $scope.gruposN2 = [];
@@ -41,13 +45,28 @@
                 if ($scope.gruposN2[$scope.grupoSeleccionado.numGrupo] !== undefined) {
                     $scope.gruposN2Seleccionados = $scope.gruposN2[$scope.grupoSeleccionado.numGrupo];
                 } else {
-                    $crudGruposPgc.getGruposN2($scope.grupoSeleccionado.numGrupo).then(function (response) {
+                    $crudGruposPgc.getSubgruposN2($scope.grupoSeleccionado.numGrupo).then(function (response) {
                         $scope.gruposN2[$scope.grupoSeleccionado.numGrupo] = response.data;
                         $scope.gruposN2Seleccionados = $scope.gruposN2[$scope.grupoSeleccionado.numGrupo];
                     });
                 }
             }
         };
+
+        $scope.gruposN3 = [];
+        $scope.actualizarGruposN3 = function () {
+            if ($scope.grupoN2Seleccionado !== null) {
+                if ($scope.gruposN3[$scope.grupoN2Seleccionado.numGrupo] !== undefined) {
+                    $scope.gruposN3Seleccionados = $scope.gruposN3[$scope.grupoN2Seleccionado.numGrupo];
+                } else {
+                    $crudGruposPgc.getSubgruposN3($scope.grupoN2Seleccionado.numGrupo).then(function (response) {
+                        $scope.gruposN3[$scope.grupoN2Seleccionado.numGrupo] = response.data;
+                        $scope.gruposN3Seleccionados = $scope.gruposN3[$scope.grupoN2Seleccionado.numGrupo];
+                    });
+                }
+            }
+        };
+
     });
 })();
 

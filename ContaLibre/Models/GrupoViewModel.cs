@@ -7,7 +7,7 @@ namespace ContaLibre.Models
 {
     public class GrupoViewModel
     {
-        public GrupoViewModel(Grupo grupo)
+        public GrupoViewModel(IGrupoPgc grupo)
         {
             NumGrupo = grupo.NumGrupo;
             Nombre = grupo.Nombre;

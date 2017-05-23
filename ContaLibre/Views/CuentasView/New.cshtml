@@ -3,4 +3,6 @@
 
 <div ng-app="contalibreApp" ng-controller="CuentaNuevaController">
     <select ng-model="grupoSeleccionado" ng-options="grupo.numGrupo + ' ' + grupo.nombre  for grupo in grupos" ng-change="actualizarGruposN2()"></select>
+    <select ng-hide="!gruposN2Seleccionados" ng-model="grupoN2Seleccionado" ng-options="grupo.numGrupo + ' ' + grupo.nombre  for grupo in gruposN2Seleccionados"ng-change="actualizarGruposN3()"></select>
+    <select ng-hide="!gruposN3Seleccionados" ng-model="grupoN3Seleccionado" ng-options="grupo.numGrupo + ' ' + grupo.nombre  for grupo in gruposN3Seleccionados" ng-change="actualizarCuentas(@User.Identity.Name)"></select>
 </div>

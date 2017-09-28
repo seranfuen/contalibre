@@ -4,22 +4,22 @@
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 <div class="row">
-    <div class="col-md-4" >
+    <div class="col-md-4" ng-controller="registerController">
         <h2>Register</h2>
         <form>
             <div class="form-group">
                 <label for="register-email">Email</label>
-                <input class="form-control" type="text" ng-model="register.Email" name="register-email" id="register-email" />
+                <input class="form-control" type="text" ng-model="data.email" name="register-email" id="register-email" />
             </div>
             <div class="form-group">
                 <label for="register-password">Password</label>
-                <input class="form-control" type="text" ng-model="register.Password" name="register-password" id="register-password" />
+                <input class="form-control" type="password" ng-model="data.password" name="register-password" id="register-password" />
             </div>
             <div class="form-group">
                 <label for="register-confirmpassword">Confirm Password</label>
-                <input class="form-control" type="text" ng-model="register.ConfirmPassword" name="register-confirmpassword" id="register-confirmpassword" />
+                <input class="form-control" type="password" ng-model="data.confirmPassword" name="register-confirmpassword" id="register-confirmpassword" />
             </div>
-            <button ng-click="performRegister()">Submit</button>
+            <button ng-click="register()">Submit</button>
             <p ng-class="registerResultClass">{{registerResult}}</p>
         </form>
     </div>
@@ -47,6 +47,7 @@
         </div>
         <div ng-if="isLoggedIn">
             <h2>Logged in</h2>
+            <p>You are logged in as {{userInfo.Email}}</p>
             <button ng-click="logoff()">Log Off</button>
         </div>
     </div>

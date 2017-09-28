@@ -4,6 +4,15 @@
     app.factory('authTokenService', function () {
         var tokenKey = 'currentUser';
 
+        var getToken = function () {
+            var localItem = localStorage.getItem(tokenKey);
+            if (localItem == null) {
+                return sessionStorage.getItem(tokenKey);
+            } else {
+                return localItem;
+            }
+        };
+
         return {
             setToken: function (token, persist) {
                 if (persist) {
@@ -12,13 +21,12 @@
                     sessionStorage.setItem(tokenKey, token);
                 }
             },
-            getToken: function () {
-                var localItem = localStorage.getItem(tokenKey);
-                if (localItem == null) {
-                    return sessionStorage.getItem(tokenKey);
-                } else {
-                    return localItem;
-                }
+            getToken: getToken,
+            getTokenHeader: function () {
+                var config = {};
+                config.headers = {};
+                config.headers.Authorization = "Bearer " + getToken();
+                return config;
             },
             removeToken: function () {
                 localStorage.removeItem(tokenKey);
@@ -32,12 +40,15 @@
 
     app.factory('authLoginService', function ($http, authTokenService) {
         var tokenUrl = '/token';
+        var userInfoUrl = '/api/Account/UserInfo';
 
         var configHeader = {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
             }
         };
+
+        var userInfo = null;
 
         return {
             /***
@@ -59,11 +70,42 @@
             },
             logoff: function () {
                 authTokenService.removeToken();
+                userInfo = null;
+            },
+            /**
+             *  If the user is logged in, retrieves the user info and caches it for future calls
+             * successCallback takes one parameter, userInfo, with the user info if it's cached or successfully retrieved
+             * failureCallback takes as parameter a response object
+             */
+            getUserInfo: function (successCallback, failureCallback) {
+                if (userInfo != null) {
+                    successCallback(userInfo);
+                } else {
+                    $http.get(userInfoUrl, authTokenService.getTokenHeader()).then(function (response) {
+                        userInfo = response.data;
+                        successCallback(userInfo);
+                    }, function (reponse) {
+                        if (failureCallback) failureCallback(response);
+                    });
+                }
             }
         };
     });
 
     app.controller('authLoginController', ['$scope', '$http', 'authTokenService', 'authLoginService', function ($scope, $http, authTokenService, authLoginService) {
+
+        var refreshUserInfo = function () {
+            $scope.isLoggedIn = authTokenService.isLoggedIn();
+
+            if ($scope.isLoggedIn) {
+                authLoginService.getUserInfo(function (userInfo) {
+                    $scope.userInfo = userInfo;
+                }, null);
+            } else {
+                $scope.userInfo = null;
+            }
+        };
+
         $scope.loginData = {
             email: '',
             password: '',
@@ -90,26 +132,42 @@
             $scope.isLoggedIn = false;
         };
 
-        $scope.isLoggedIn = authTokenService.isLoggedIn();;
+        refreshUserInfo();
     }]);
 
-    //$scope.register = {
-    //    Password: '',
-    //    ConfirmPassword: '',
-    //    Email: ''
-    //};
+    app.factory('registerService', function ($http) {
+        var registerUrl = '/api/Account/Register';
 
-    //$scope.performRegister = function () {
-    //    $http.post('/api/Account/Register', JSON.stringify($scope.register)).then(function (response) {
-    //        $scope.registerResult = "Registered successfully";
-    //        $scope.registerResultClass = "";
-    //    }, function (response) {
-    //        $scope.registerResult = "Register failed: " + response.data.Message;
-    //        $scope.registerResultClass = "register-failed";
-    //    });
-    //};
+        return {
+            /***
+             * Attempts to register the user with the data given (Password, ConfirmPassword, Email). SuccessCallback is a parameterless callback on success
+             * failureCallback takes response as parameter
+             */
+            register: function (data, successCallback, failureCallback) {
+                $http.post(registerUrl, JSON.stringify(data)).then(function (response) {
+                    if (successCallback) successCallback();
+                }, function (response) {
+                    if (failureCallback) failureCallback(response);
+                });
+            }
+        };
+    });
 
+    app.controller('registerController', ['$scope', 'registerService', function ($scope, registerService) {
+        $scope.data = {
+            password: '',
+            confirmPassword: '',
+            email: ''
+        };
 
+        $scope.register = function () {
+            registerService.register($scope.data, function () {
+                // hide register, show message that it's completed'
+            }, function (response) {
+                $scope.registerResult = 'Error: ' + response.data.Message;
+            });
+        };
+    }]);
 })();
 
 /** Testing **/

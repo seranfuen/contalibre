@@ -1,0 +1,60 @@
+﻿<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-md-4" >
+        <h2>Register</h2>
+        <form>
+            <div class="form-group">
+                <label for="register-email">Email</label>
+                <input class="form-control" type="text" ng-model="register.Email" name="register-email" id="register-email" />
+            </div>
+            <div class="form-group">
+                <label for="register-password">Password</label>
+                <input class="form-control" type="text" ng-model="register.Password" name="register-password" id="register-password" />
+            </div>
+            <div class="form-group">
+                <label for="register-confirmpassword">Confirm Password</label>
+                <input class="form-control" type="text" ng-model="register.ConfirmPassword" name="register-confirmpassword" id="register-confirmpassword" />
+            </div>
+            <button ng-click="performRegister()">Submit</button>
+            <p ng-class="registerResultClass">{{registerResult}}</p>
+        </form>
+    </div>
+    <div class="col-md-4" ng-controller="authLoginController">
+        <div ng-if="!isLoggedIn">
+            <h2>Login</h2>
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input class="form-control" type="text" ng-model="loginData.email" name="login-email" id="login-email" />
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input class="form-control" type="password" ng-model="loginData.password" name="login-password" id="login-password" />
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" ng-model="loginData.rememberMe" name="login-rememberme" id="login-rememberme" />
+                    <label for="login-rememberme">Remember me</label>
+                </div>
+                <div class="form-group">
+                    <button ng-click="login()">Submit</button>
+                    <p ng-class="registerResultClass">{{loginResult}}</p>
+                </div>
+            </form>
+        </div>
+        <div ng-if="isLoggedIn">
+            <h2>Logged in</h2>
+            <button ng-click="logoff()">Log Off</button>
+        </div>
+    </div>
+    <div class="col-md-4" ng-controller="contalibreAuthTestController">
+        <h2>Test Api</h2>
+        <form>
+            <button ng-click="performTest()">Test</button>
+            <p ng-class="testResultClass">{{testResult}}</p>
+        </form>
+    </div>
+</div>

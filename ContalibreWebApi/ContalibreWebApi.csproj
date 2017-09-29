@@ -239,6 +239,10 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Entities\Account.cs" />
+    <Compile Include="Models\Entities\Asiento.cs" />
+    <Compile Include="Models\Entities\Contabilidad.cs" />
+    <Compile Include="Models\Entities\Partida.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />

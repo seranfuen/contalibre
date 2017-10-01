@@ -48,7 +48,15 @@
             }
         };
 
+        var loginNotificationCallbacks = [];
+
         var userInfo = null;
+
+        var onLoginChanged = function () {
+            for (var i = 0; i < loginNotificationCallbacks.length; i++) {
+                loginNotificationCallbacks[i]();
+            }
+        };
 
         return {
             /***
@@ -64,6 +72,7 @@
                 $http.post(tokenUrl, $.param(loginData), configHeader).then(function (response) {
                     authTokenService.setToken(response.data.access_token, persistToken);
                     if (successCallback != null) successCallback(response.data.access_token);
+                    onLoginChanged();
                 }, function (response) {
                     if (failureCallback != null) failureCallback(response);
                 });
@@ -71,6 +80,7 @@
             logoff: function () {
                 authTokenService.removeToken();
                 userInfo = null;
+                onLoginChanged();
             },
             /**
              *  If the user is logged in, retrieves the user info and caches it for future calls
@@ -88,13 +98,19 @@
                         if (failureCallback) failureCallback(response);
                     });
                 }
+            },
+            // The callback is only used to inform callers that a change in log in status has happened (user logged in successfully or logged out)
+            addNotifyLoginChange: function (callback) {
+                loginNotificationCallbacks.push(callback);
+            },
+            removeNotifyLoginChange: function (callback) {
+                loginNotificationCallbacks.removeItem(callback);
             }
         };
     });
 
-    app.controller('authLoginController', ['$scope', '$http', 'authTokenService', 'authLoginService', function ($scope, $http, authTokenService, authLoginService) {
-
-        var refreshUserInfo = function () {
+    app.controller('contalibreBaseController', ['$scope', '$http', 'authTokenService', 'authLoginService', function ($scope, $http, authTokenService, authLoginService) {
+        $scope.refreshUserInfo = function () {
             $scope.isLoggedIn = authTokenService.isLoggedIn();
 
             if ($scope.isLoggedIn) {
@@ -105,6 +121,11 @@
                 $scope.userInfo = null;
             }
         };
+    }]);
+
+    app.controller('authLoginController', ['$scope', '$http', '$controller', 'authTokenService', 'authLoginService', function ($scope, $http, $controller, authTokenService, authLoginService) {
+
+        $controller('contalibreBaseController', { $scope: $scope });
 
         $scope.loginData = {
             email: '',
@@ -132,7 +153,7 @@
             $scope.isLoggedIn = false;
         };
 
-        refreshUserInfo();
+        $scope.refreshUserInfo();
     }]);
 
     app.factory('registerService', function ($http) {
@@ -168,6 +189,18 @@
             });
         };
     }]);
+
+    app.controller('contalibreContabilidadesController', ['$scope', '$controller', 'authLoginService', function ($scope, $controller, authLoginService) {
+        $controller('contalibreBaseController', { $scope: $scope });
+
+        $scope.refreshUserInfo();
+
+        authLoginService.addNotifyLoginChange($scope.refreshUserInfo);
+        $scope.$on("$destroy", function () {
+            authLoginService.removeNotifyLoginChange($scope.refreshUserInfo);
+        })
+    }]);
+
 })();
 
 /** Testing **/

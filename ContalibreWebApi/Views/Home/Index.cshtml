@@ -3,6 +3,7 @@
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
+
 <div class="row">
     <div class="col-md-4" ng-controller="registerController">
         <h2>Register</h2>
@@ -57,5 +58,13 @@
             <button ng-click="performTest()">Test</button>
             <p ng-class="testResultClass">{{testResult}}</p>
         </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4"  ng-controller="contalibreContabilidadesController">
+        <div ng-if="isLoggedIn">
+            <h2>Contabilidades del usuario</h2>
+            <p>{{userInfo}}</p>
+        </div>
     </div>
 </div>

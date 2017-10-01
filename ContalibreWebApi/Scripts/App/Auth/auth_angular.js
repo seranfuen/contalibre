@@ -189,18 +189,6 @@
             });
         };
     }]);
-
-    app.controller('contalibreContabilidadesController', ['$scope', '$controller', 'authLoginService', function ($scope, $controller, authLoginService) {
-        $controller('contalibreBaseController', { $scope: $scope });
-
-        $scope.refreshUserInfo();
-
-        authLoginService.addNotifyLoginChange($scope.refreshUserInfo);
-        $scope.$on("$destroy", function () {
-            authLoginService.removeNotifyLoginChange($scope.refreshUserInfo);
-        })
-    }]);
-
 })();
 
 /** Testing **/

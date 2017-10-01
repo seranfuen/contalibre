@@ -29,5 +29,7 @@ namespace ContalibreWebApi.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ContalibreWebApi.Models.Entities.Contabilidad> Contabilidades { get; set; }
     }
 }

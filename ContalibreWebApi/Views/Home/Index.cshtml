@@ -64,7 +64,38 @@
     <div class="col-md-4"  ng-controller="contalibreContabilidadesController">
         <div ng-if="isLoggedIn">
             <h2>Contabilidades del usuario</h2>
-            <p>{{userInfo}}</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Company</th>
+                        <th>Year</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="row in data.contabilidades">
+                        <td>{{row.Id}}</td>
+                        <td>{{row.CompanyName}}</td>
+                        <td>{{row.Year}}</td>
+                        <td>{{row.UserName}}</td>
+                        <td><a ng-click="deleteContabilidad(row.Id)" href="">Delete</a></p></td>
+                    </tr>
+                </tbody>
+            </table>
+            <form name="contabilidadForm">
+                <div class="form-group">
+                    <label for="contabilidadCompany">Company</label>
+                    <input ng-required="required" ng-minlength="3" class="form-control" type="text" ng-model="data.newEntity.CompanyName" name="contabilidadCompany" id="contabilidadCompany" />
+                    <p>{{contabilidadForm.contabilidadCompany.$valid}}</p>
+                </div>
+                <div class="form-group">
+                    <label for="contabilidadYear">Year</label>
+                    <input ng-required="required" class="form-control" type="number" ng-model="data.newEntity.Year" name="contabilidadYear" id="contabilidadYear" />
+                    <p>{{contabilidadForm.contabilidadYear.$valid}}</p>
+                </div>
+                <input type="submit" value="Submit" ng-click="addContabilidad()"/>
+            </form>
         </div>
     </div>
 </div>

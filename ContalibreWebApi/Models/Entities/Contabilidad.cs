@@ -32,8 +32,14 @@ namespace ContalibreWebApi.Models.Entities
             set;
         }
 
-        [Required]
         public virtual ApplicationUser User
+        {
+            get;
+            set;
+        }
+
+        [Required]
+        public virtual string UserId
         {
             get;
             set;

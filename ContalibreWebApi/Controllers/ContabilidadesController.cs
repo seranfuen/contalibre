@@ -11,6 +11,7 @@ using System.Web.Http.Description;
 using ContalibreWebApi.Models;
 using ContalibreWebApi.Models.Entities;
 using Microsoft.AspNet.Identity;
+using ContalibreWebApi.Models.ViewModels;
 
 namespace ContalibreWebApi.Controllers
 {
@@ -19,15 +20,21 @@ namespace ContalibreWebApi.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Contabilidades
-        public IQueryable<Contabilidad> GetContabilidads()
+        public IQueryable<ContabilidadViewModel> GetContabilidads()
         {
-            return db.Contabilidades;
+            return db.Contabilidades.Select(cont => new ContabilidadViewModel(cont));
         }
 
         [Route("api/Contabilidades/User")]
-        public IQueryable<Contabilidad> GetContabilidadesCurrentUser()
+        public IQueryable<ContabilidadViewModel> GetContabilidadesCurrentUser()
         {
-            return db.Contabilidades.Where(contabilidad => contabilidad.User.Id == UserIdentityId);
+            return db.Contabilidades.Where(contabilidad => contabilidad.User.Id == UserIdentityId).Select(cont => new ContabilidadViewModel()
+            {
+                CompanyName = cont.CompanyName,
+                Id = cont.Id,
+                Year = cont.Year,
+                UserName = cont.User.UserName
+            });
         }
 
         // GET: api/Contabilidades/5
@@ -40,7 +47,7 @@ namespace ContalibreWebApi.Controllers
                 return NotFound();
             }
 
-            return Ok(contabilidad);
+            return Ok(new ContabilidadViewModel(contabilidad));
         }
 
         // PUT: api/Contabilidades/5
@@ -82,6 +89,11 @@ namespace ContalibreWebApi.Controllers
         [ResponseType(typeof(Contabilidad))]
         public IHttpActionResult PostContabilidad(Contabilidad contabilidad)
         {
+            contabilidad.UserId = UserIdentityId;
+
+            ModelState.Clear();
+            Validate(contabilidad);
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

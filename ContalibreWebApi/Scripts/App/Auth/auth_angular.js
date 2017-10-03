@@ -109,23 +109,7 @@
         };
     });
 
-    app.controller('contalibreBaseController', ['$scope', '$http', 'authTokenService', 'authLoginService', function ($scope, $http, authTokenService, authLoginService) {
-        $scope.refreshUserInfo = function () {
-            $scope.isLoggedIn = authTokenService.isLoggedIn();
-
-            if ($scope.isLoggedIn) {
-                authLoginService.getUserInfo(function (userInfo) {
-                    $scope.userInfo = userInfo;
-                }, null);
-            } else {
-                $scope.userInfo = null;
-            }
-        };
-    }]);
-
     app.controller('authLoginController', ['$scope', '$http', '$controller', 'authTokenService', 'authLoginService', function ($scope, $http, $controller, authTokenService, authLoginService) {
-
-        $controller('contalibreBaseController', { $scope: $scope });
 
         $scope.loginData = {
             email: '',
@@ -153,6 +137,18 @@
             $scope.isLoggedIn = false;
         };
 
+        $scope.refreshUserInfo = function () {
+            if ($scope.isLoggedIn) {
+                authLoginService.getUserInfo(function (userInfo) {
+                    $scope.userInfo = userInfo;
+                }, null);
+            } else {
+                $scope.userInfo = null;
+            }
+
+        };
+
+        $scope.isLoggedIn = authTokenService.isLoggedIn();
         $scope.refreshUserInfo();
     }]);
 

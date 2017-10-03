@@ -313,6 +313,8 @@
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\App\Auth\auth_angular.js" />
     <Content Include="Scripts\App\Helpers\contalibre_helpers.js" />
+    <Content Include="Scripts\App\Tests\qunit-2.4.0.css" />
+    <Content Include="Scripts\App\Tests\qunit-2.4.0.js" />
     <Content Include="Scripts\App\Tests\test.html" />
     <Content Include="Scripts\App\Tests\tests.js" />
     <Content Include="Scripts\bootstrap.js" />

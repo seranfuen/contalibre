@@ -6,3 +6,13 @@
         } while (index > -1);
     };
 })();
+
+var Helper = (function () {
+    var helper = {};
+    helper.isFunction = function (testing) {
+        var getType = {};
+        return testing && getType.toString.call(testing) === '[object Function]';
+    };
+
+    return helper;
+})();

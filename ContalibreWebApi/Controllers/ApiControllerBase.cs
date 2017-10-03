@@ -23,7 +23,7 @@ namespace ContalibreWebApi.Controllers
         {
             get
             {
-                if (User == null) return null;
+                if (User == null || User.Identity.Name == null) return null;
                 var user = UserManager.FindByName(User.Identity.Name);
                 return user.Id;
             }

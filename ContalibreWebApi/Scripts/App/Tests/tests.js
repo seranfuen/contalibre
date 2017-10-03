@@ -32,3 +32,23 @@ QUnit.test("Remove item from array with callbacks", function (assert) {
     array.remove(func);
     assert.equal(array.length, 0);
 });
+
+QUnit.test("Test if function - null passed", function (assert) {
+    var test = null;
+    assert.notOk(Helper.isFunction(test));
+});
+
+QUnit.test("Test if function - int passed", function (assert) {
+    var test = 3;
+    assert.notOk(Helper.isFunction(test));
+});
+
+QUnit.test("Test if function - empty function passed", function (assert) {
+    var test = function () { };
+    assert.ok(Helper.isFunction(test));
+});
+
+QUnit.test("Test if function - function passed", function (assert) {
+    var test = function (a) { return a * a; };
+    assert.ok(Helper.isFunction(test));
+});

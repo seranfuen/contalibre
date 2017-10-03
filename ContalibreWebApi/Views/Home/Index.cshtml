@@ -74,12 +74,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="row in data.contabilidades">
+                    <tr ng-repeat="row in data.entities">
                         <td>{{row.Id}}</td>
                         <td>{{row.CompanyName}}</td>
                         <td>{{row.Year}}</td>
                         <td>{{row.UserName}}</td>
-                        <td><a ng-click="deleteContabilidad(row.Id)" href="">Delete</a></p></td>
+                        <td><a ng-click="deleteEntity(row.Id)" href="">Delete</a></p></td>
                     </tr>
                 </tbody>
             </table>
@@ -94,7 +94,7 @@
                     <input ng-required="required" class="form-control" type="number" ng-model="data.newEntity.Year" name="contabilidadYear" id="contabilidadYear" />
                     <p>{{contabilidadForm.contabilidadYear.$valid}}</p>
                 </div>
-                <input type="submit" value="Submit" ng-click="addContabilidad()"/>
+                <input type="submit" value="Submit" ng-click="createEntity()"/>
             </form>
         </div>
     </div>

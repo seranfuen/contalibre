@@ -16,6 +16,7 @@ namespace ContalibreWebApi.Models.ViewModels
             CompanyName = contabilidad.CompanyName;
             Year = contabilidad.Year;
             UserName = contabilidad.User != null ? contabilidad.User.UserName : null;
+            UserId = contabilidad.UserId;
         }
 
         public ContabilidadViewModel()
@@ -40,6 +41,12 @@ namespace ContalibreWebApi.Models.ViewModels
         }
 
         public int Year
+        {
+            get;
+            set;
+        }
+
+        public string UserId
         {
             get;
             set;

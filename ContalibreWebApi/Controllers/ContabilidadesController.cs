@@ -33,7 +33,8 @@ namespace ContalibreWebApi.Controllers
                 CompanyName = cont.CompanyName,
                 Id = cont.Id,
                 Year = cont.Year,
-                UserName = cont.User.UserName
+                UserName = cont.User.UserName,
+                UserId = cont.UserId
             });
         }
 
